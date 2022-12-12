@@ -307,8 +307,6 @@ with tab3:
                 knn = KNeighborsClassifier(n_neighbors=k)
                 knn.fit(X_train,y_train)
                 # save model
-                filenameKNN = '/content/drive/MyDrive/DATA MINING/TUGAS/model/modelKNN'+str(k)+'.pkl'
-                joblib.dump(knn,filenameKNN)
                 y_pred=knn.predict(X_test)
                 scores[k] = accuracy_score(y_test,y_pred)
                 scores_list.append(accuracy_score(y_test,y_pred))
@@ -387,8 +385,6 @@ with tab3:
                 kmeans = KMeans(n_clusters=k,random_state=0)
                 kmeans.fit(X_train,y_train)
                 # save model
-                filenameKMeans = '/content/drive/MyDrive/DATA MINING/TUGAS/model/modelKmeans'+str(k)+'.pkl'
-                joblib.dump(kmeans,filenameKMeans)
                 y_pred=kmeans.predict(X_test)
                 akurasi[k] = accuracy_score(y_test,y_pred)
                 akurasi_score.append(accuracy_score(y_test,y_pred))
