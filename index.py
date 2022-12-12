@@ -210,12 +210,7 @@ with tab2:
     filepath.parent.mkdir(parents=True, exist_ok=True)  
     x.to_csv(filepath) 
     '''
-    st.code(saveData, language='python')
-
-    from pathlib import Path  
-    filepath = Path('/content/drive/MyDrive/DATA MINING/TUGAS/model/data_depresi.csv')  
-    filepath.parent.mkdir(parents=True, exist_ok=True)  
-    x.to_csv(filepath)     
+    st.code(saveData, language='python')    
 
     prepro='''
     from sklearn import preprocessing
@@ -273,10 +268,6 @@ with tab2:
     joblib.dump(scaler, filename) 
     '''
     st.code(savenormalisasi, language='python')
-
-    import joblib
-    filename = '/content/drive/MyDrive/DATA MINING/TUGAS/model/norm.sav'
-    joblib.dump(scaler, filename) 
 
 with tab3:
     pilihanModel = st.radio(
